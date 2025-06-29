@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTeller</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="pic.png" alt="Logo" class="logo-img">
+                <h1 class="site-title neo-glow">TimeTeller</h1>
+            </div>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#ageCalculator" class="nav-link">Age Calculator</a></li>
+                <li><a href="#bmiCalculator" class="nav-link">BMI Calculator</a></li>
+                <li><a href="#nextBirthday" class="nav-link">Next Birthday</a></li>
+                <li><a href="#birthSign" class="nav-link">Birth Sign</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="theme-toggle">Change Background</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="page active hero">
+            <h1 class="neo-glow">Welcome to TimeTeller</h1>
+            <p class="neo-glow">Track your time and wellness with our all-in-one hub!</p>
+        </section>
+
+        <section id="ageCalculator" class="page">
+            <h1 class="neo-glow">Age Calculator</h1>
+            <span id="ageCelebration"></span>
+            <input type="date" id="dob">
+            <button onclick="calculateAge()">Calculate Age</button>
+            <p id="ageResult"></p>
+            <p id="milestone"></p>
+        </section>
+
+        <section id="bmiCalculator" class="page">
+            <h1 class="neo-glow">BMI Calculator</h1>
+            <input type="number" id="height" placeholder="Height (cm)">
+            <input type="number" id="weight" placeholder="Weight (kg)">
+            <button onclick="calculateBMI()">Check BMI</button>
+            <p id="bmiResult"></p>
+            <div id="running-man" class="running-man">🏃‍♂️</div>
+        </section>
+
+        <section id="nextBirthday" class="page">
+            <h1 class="neo-glow">Days Until Next Birthday</h1>
+            <input type="date" id="bday">
+            <button onclick="daysToBirthday()">Find Out</button>
+            <p id="bdayResult"></p>
+            <canvas id="countdownClock" width="200" height="200"></canvas>
+        </section>
+
+        <section id="birthSign" class="page">
+            <h1 class="neo-glow">Your Birth Sign (Zodiac)</h1>
+            <input type="date" id="zodiacInput">
+            <button onclick="getZodiac()">Reveal Sign</button>
+            <p id="zodiacResult"></p>
+            <div id="zodiacDetails"></div>
+        </section>
+
+        <section id="contact" class="page">
+            <h1 class="neo-glow">Contact Me</h1>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button onclick="sendContact()">Send Feedback</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 RN | CodeAlpha Internship</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
